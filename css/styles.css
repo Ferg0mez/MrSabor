@@ -1,0 +1,89 @@
+body { background-color: #78bbcb; }
+
+body, td, th {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #dedede;
+}
+
+@font-face {
+    font-family: 'cooper_blackregular';
+    src: url('coopbl-webfont.eot');
+    src: url('coopbl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('coopbl-webfont.woff2') format('woff2'),
+         url('coopbl-webfont.woff') format('woff'),
+         url('coopbl-webfont.ttf') format('truetype'),
+         url('coopbl-webfont.svg#cooper_blackregular') format('svg');
+}
+
+:root {
+	--transform-value: -100%;
+	--animation-duration: 1.5s;
+	--animation-ease: ease-in;
+}
+
+@keyframes initialAnimation-horizontal {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(var(--transform-value));
+    }
+}
+
+[data-animation*='first'] div:first-child, [data-animation*='first'] div:last-child {
+	position: fixed;
+	width: 50vw;
+	height: 100vh;
+	top: 0;
+	border: .25em solid #b62a17;
+	background: linear-gradient(to right, #b62a17 0%,#b62a17 6%,#6d0019 10%,#b62a17 14%,#b62a17 20%,#6d0019 24%,#b62a17 28%,#b62a17 34%,#6d0019 38%,#b62a17 42%,#b62a17 48%,#6d0019 52%,#b62a17 56%,#b62a17 62%,#6d0019 66%,#b62a17 70%,#b62a17 76%,#6d0019 80%,#b62a17 84%,#b62a17 90%,#6d0019 94%,#b62a17 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	z-index: 123456;
+}
+
+[data-animation*='first'] div:first-child {
+    left: 0;
+    animation: var(--animation-duration) var(--animation-ease) var(--animation-duration) 1 forwards initialAnimation-horizontal;
+}
+
+[data-animation*='first'] div:before {
+    content: attr(cortina-izq);
+    float: right;
+    margin-right: 15px;
+    font-size: 130px;
+	-webkit-text-stroke: 4px black;
+	line-height: 570%;
+	font-family: 'cooper_blackregular';
+}
+
+@media only screen and (min-width: 768px) {
+	[data-animation*='first'] div:before {
+	    font-size: 80px;
+	}
+}
+
+[data-animation*='first'] div:last-child {
+    right: 0;
+    --transform-value: 100%;
+    animation: var(--animation-duration) var(--animation-ease) var(--animation-duration) 1 forwards initialAnimation-horizontal;
+}
+
+[data-animation*='first'] div:after {
+	content: attr(cortina-der);
+	margin-left: 25px;
+	font-size: 130px;
+	-webkit-text-stroke: 4px black;
+	line-height: 570%;
+	font-family: 'cooper_blackregular';
+}
+
+@media only screen and (min-width: 768px) {
+	[data-animation*='first'] div:after {
+		font-size: 80px;
+	}
+}
+
+.copy {
+	font-size: x-small;
+	text-align: center;
+	color: #78bbcb;
+}
