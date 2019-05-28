@@ -16,6 +16,19 @@
   <link rel="stylesheet" href="css/AdminLTE.css">
   <link rel="apple-touch-icon" sizes="194x194" href="img/icon.png" type="image/png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+<script>
+   function validarPassword(){
+     texto = prompt("Para ver la pagina Introduzca su contraseña");
+     while(texto!="admin"){
+       alert("Password incorrecta");
+       texto = prompt("Para ver la pagina Introduzca su contraseña");
+     }
+     alert("Password Correcta");
+
+  }
+
+</script>  
 </head>
 <body class="hold-transition login-page" style="
 background: url(img/fondo3.jpeg);
@@ -67,5 +80,6 @@ background-size: contain;
     });
   });
 </script>
+<script>validarPassword();</script>
 </body>
 </html>
