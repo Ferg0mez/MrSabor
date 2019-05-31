@@ -18,12 +18,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 <script>
    function validarPassword(){
-     texto = prompt("Para ver la pagina Introduzca su contraseña");
-     while(texto!="admin"){
+     var texto=document.getElementById("password").value; 
+     while(texto!="admin"){      
        alert("Password incorrecta");
-       texto = prompt("Para ver la pagina Introduzca su contraseña");
+       alert(texto);
      }
-     alert("Password Correcta");
+      alert(texto);
   }
 </script>  
 </head>
@@ -46,7 +46,7 @@ background-size: contain;
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Contraseña">
+        <input id="password" type="password" class="form-control" placeholder="Contraseña">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
