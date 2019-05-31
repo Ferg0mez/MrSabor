@@ -16,6 +16,15 @@
   <link rel="stylesheet" href="css/AdminLTE.css">
   <link rel="apple-touch-icon" sizes="194x194" href="img/icon.png" type="image/png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<script>
+   function validarPassword(){
+     texto = prompt("Para ver la pagina Introduzca su contraseña");
+     while(texto!="admin"){
+       alert("Password incorrecta");
+       texto = prompt("Para ver la pagina Introduzca su contraseña");
+     }
+     alert("Password Correcta");
+  }
 </script>  
 </head>
 <body class="hold-transition login-page" style="
@@ -31,13 +40,13 @@ background-size: contain;
   <div class="login-box-body">
     <p class="login-box-msg">Ingresa con tu cuenta de DUOC UC</p>
 
-    <form action="" method="post">
+    <form action="menus.html" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Usuario">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input id="password" type="password" class="form-control" placeholder="Contraseña">
+        <input type="password" class="form-control" placeholder="Contraseña">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -68,5 +77,6 @@ background-size: contain;
     });
   });
 </script>
+<script>validarPassword();</script>
 </body>
 </html>
