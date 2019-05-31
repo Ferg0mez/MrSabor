@@ -19,11 +19,12 @@
 <script>
    function validarPassword(){
      var texto=document.getElementById("password").value; 
-     while(texto!="admin"){      
+     if(texto!="admin"){      
        alert("Password incorrecta");
        alert(texto);
+     }else{
+       alert(texto);
      }
-      alert(texto);
   }
 </script>  
 </head>
