@@ -1,104 +1,337 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MrSabor | Iniciar Sesión</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="css/AdminLTE.css">
-  <link rel="apple-touch-icon" sizes="194x194" href="img/icon.png" type="image/png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
-<body class="hold-transition login-page" style="
-background: url(img/fondo3.jpeg);
-background-size: contain;
-">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="index.html"><img src="img/logo.png " style="
-      width: 280px;"></a>
-  </div>
-  <!-- /.login-logo -->
-  <!-- /.login-box-body -->
-</div>
-<div class="container">
-    <div class="box box-danger box-solid">
-        <div class="box-header with-border">
-          <h3 class="box-title">Menu del día</h3>
-        </div>
-        <div class="box-body">
-          <p>Arrollado con salsa y queso</p>
-          <img src="img/comida1.jpg" style="width: 320px;"> 
-          <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
-        </div>
-        <!-- /.box-body -->
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>MrSabor | Menus</title>
+      <!-- Tell the browser to be responsive to screen width -->
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+      <!-- Bootstrap 3.3.7 -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!-- Ionicons -->
+      <link rel="stylesheet" href="css/ionicons.min.css">
+      <!-- Theme style -->
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+      <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <link href="carrusel_b.css" rel="stylesheet" type="text/css" />
+      <script src="carrusel_b.js"></script>
+      <script>
+         function principal() { // onload body
+           new CarruselB({
+             id: "carrusel_b",
+             waiting: false, // milliseconds (false per desactivar)
+           });
+         }
+      </script>
+      <link rel="stylesheet" href="css/AdminLTE.css">
+      <link rel="apple-touch-icon" sizes="194x194" href="img/icon.png" type="image/png">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+   </head>
+   <body class="hold-transition login-page" style="
+      background: url(img/fondoopcion333.jpg);
+      background-size:300%; background-attachment: fixed; background-position:center; 
+      ">
+      <div class="login-box">
+         <div class="login-logo">
+            <a href="index.html"><img src="img/logo.png " style="
+               width: 250px; background-position:center"></a>
+         </div>
+         <div id="carrusel_b">
+            <ul class="photos_b">
+               <li><img id="foto1" src="imgs/menuexpress.jpg" width="315" height="200"/></li>
+               <li><img id="foto2" src="imgs/foto2.jpg" width="315" height="200"/></li>
+               <li><img id="foto3" src="imgs/foto3.jpg" width="315" height="200"/></li>
+            </ul>
+            <ul class="links_b">
+               <li><a href="#foto1">Promo 1</a></li>
+               <li><a href="#foto2">Promo 2</a></li>
+               <li><a href="#foto3">Promo 3</a></li>
+            </ul>
+         </div>
+         &nbsp;
+         <!-- /.login-logo -->
+         <!-- /.login-box-body -->
+         <div class="container">
+            <body class="hold-transition skin-blue sidebar-mini">
+               <div class="wrapper">
+                  <!-- START ACCORDION & CAROUSEL-->
+                  <div class="row" style=" width: 700px; background-position:center;">
+                     <div class="col-md-5"  style="width: 320px; background-position:center;">
+                        <div class="box box-solid">
+                           <div class="box-header black-border">
+                              <h3 class="box-title" style="font-size: 25px;line-height: 1;font-weight: 900;">Tipos de Menus</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                              <div class="box-group" id="accordion">
+                                 <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+                                 <div class="panel box box-primary">
+                                    <div class="box-header with-border">
+                                       <h4 class="box-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                          Comun
+                                          </a>
+                                       </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                       <div class="box-body">
+                                        </div>
+                                       <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                          <div class="box-header with-border" style="background-color: #5089ba;">
+                                             <h3 class="box-title">Porotos con Riendas</h3>
+                                          </div>
+                                          <div class="box-body">
+                                             <p>Porotos con Longaniza y cebolla</p>
+                                             <img src="img/comun1.jpg" style="width: 246px;">
+                                             <div class="box-title" style="color: #000; font-weight: 600;"> Precio $2.290 </div>
+                                             <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                          </div>
+                                          <!-- /.box-body -->
+                                       </div>
+                                       <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                          <div class="box-header with-border" style="background-color: #5089ba;">
+                                             <h3 class="box-title">Menu Junaeb</h3>
+                                          </div>
+                                          <div class="box-body">
+                                             <p>Charquican,Ensalada de zanahoria, manzana, vaso de agua</p>
+                                             <img src="img/menujuna.jpg" style="width: 246px;"> 
+                                             <div class="box-title" style="color: #000; font-weight: 600;"> Precio $1.290 </div>
+                                             <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                          </div>
+                                          <!-- /.box-body -->
+                                        </div>
+                                        <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                           <div class="box-header with-border" style="background-color: #5089ba;">
+                                              <h3 class="box-title">Sopa de Mariscos "Los 7 mares"</h3>
+                                           </div>
+                                           <div class="box-body">
+                                              <p>Camaron, Aji, papas, Almeja, Pescado, calamar,pulpo y zanahoria</p>
+                                              <img src="img/comun2.jpg" style="width: 246px;"> 
+                                              <div class="box-title" style="color: #000; font-weight: 600;"> Precio $2.990 </div>
+                                              <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                           </div>
+                                           <!-- /.box-body -->
+                                          </div>
+                                          <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                             <div class="box-header with-border" style="background-color: #5089ba;">
+                                                <h3 class="box-title">Pastel de Choclo</h3>
+                                             </div>
+                                             <div class="box-body">
+                                                <p>Delicioso Pastel de Choclo </p>
+                                                <img src="img/comun3.jpg" style="width: 246px;"> 
+                                                <div class="box-title" style="color: #000; font-weight: 600;"> Precio $1.850 </div>
+                                                <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                             </div>
+                                             <!-- /.box-body -->
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel box box-danger">
+                              <div class="box-header with-border">
+                                 <h4 class="box-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    Carnes
+                                    </a>
+                                 </h4>
+                              </div>
+                              <div id="collapseTwo" class="panel-collapse collapse">
+                                 <div class="box-body">
+                                    <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                       <div class="box-header with-border" style="background-color: #e4170f;">
+                                          <h3 class="box-title">Megaburguer</h3>
+                                       </div>
+                                       <div class="box-body">
+                                          <p>Lechuga, Cebolla, Queso cheddar y pepinillo </p>
+                                          <img src="img/foto2.jpg" style="width: 246px;"> 
+                                          <div class="box-title" style="color: #ff0b0b; font-weight: 600;">★ OFERTA ★  Precio $1.150 </div>
+                                          <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                       </div>
+                                       <!-- /.box-body -->
+                                    </div>
+                                    <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                       <div class="box-header with-border" style="background-color: #e4170f;">
+                                          <h3 class="box-title">Chorrillana</h3>
+                                       </div>
+                                       <div class="box-body">
+                                          <p>Papas fritas, huevo y salchicha asadas en Barbecue  </p>
+                                          <img src="img/foto3.jpg" style="width: 246px;"> 
+                                          <div class="box-title" style="color: #000; font-weight: 600;"> Precio $3.290 </div>
+                                          <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                       </div>
+                                       <!-- /.box-body -->
+                                    </div>
+                                    <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                       <div class="box-header with-border" style="background-color: #e4170f;">
+                                          <h3 class="box-title">Alitas de Pollo</h3>
+                                       </div>
+                                       <div class="box-body">
+                                          <p>Alitas de pollo fritas al Merken con zanahoria  </p>
+                                          <img src="img/foto4.jpg" style="width: 246px;"> 
+                                          <div class="box-title" style="color: #000; font-weight: 600;"> Precio $2.790 </div>
+                                          <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                       </div>
+                                       <!-- /.box-body -->
+                                    </div>
+                                    <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                       <div class="box-header with-border" style="background-color: #e4170f;">
+                                          <h3 class="box-title">Costillar al Horno</h3>
+                                       </div>
+                                       <div class="box-body">
+                                          <p>Costillar con salsa Barbecue y papas fritas </p>
+                                          <img src="img/foto5.jpg" style="width: 246px;"> 
+                                          <div class="box-title" style="color: #ff0b0b; font-weight: 600;">★ OFERTA ★  Precio $1.690 </div>
+                                          <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                       </div>
+                                       <!-- /.box-body -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="panel box box-success">
+                                 <div class="box-header with-border">
+                                    <h4 class="box-title">
+                                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                       Vegetales
+                                       </a>
+                                    </h4>
+                                 </div>
+                                 <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="box-body">
+                                       <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                          <div class="box-header with-border" style="background-color: #096f03">
+                                             <h3 class="box-title">Menu Express</h3>
+                                          </div>
+                                          <div class="box-body">
+                                             <p>Sandwich con Lechuga, Jamon, Tomate, Queso fresco</p>
+                                             <img src="img/menuexpress.jpg" style="width: 246px;">
+                                             <div class="box-title" style="color: #ff0b0b; font-weight: 600;">★ OFERTA ★  Precio $990 </div>
+                                             <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                          </div>
+                                          <!-- /.box-body -->
+                                       </div>
+                                       <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                          <div class="box-header with-border" style="background-color: #096f03">
+                                             <h3 class="box-title">Ensalada Vegetariana</h3>
+                                          </div>
+                                          <div class="box-body">
+                                             <p>Lechuga, Queso blanco, Tomate, Aceituna</p>
+                                             <img src="img/ensalada1.jpg" style="width: 246px;">
+                                             <div class="box-title" style="color: #000; font-weight: 600;"> Precio 1.730 </div>
+                                             <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                          </div>
+                                          <!-- /.box-body -->
+                                       </div>
+                                       <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                          <div class="box-header with-border" style="background-color: #096f03">
+                                             <h3 class="box-title">Tortilla Vegana</h3>
+                                          </div>
+                                          <div class="box-body">
+                                             <p>Tortilla con Tomate y palta</p>
+                                             <img src="img/Menuvegano.jpg" style="width: 246px;">
+                                             <div class="box-title" style="color: #000; font-weight: 600;"> Precio $1.190 </div>
+                                             <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                          </div>
+                                          <!-- /.box-body -->
+                                        </div>
+                                        <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                           <div class="box-header with-border" style="background-color: #096f03">
+                                              <h3 class="box-title">Sopa Thai de Verduras</h3>
+                                           </div>
+                                           <div class="box-body">
+                                              <p>zanahoria, pimientos,poroto verde, cebolla, semillas de sesamo, leche de coco y  jengibre rallado</p>
+                                              <img src="img/vegetales1.jpg" style="width: 246px; height: 250px">
+                                              <div class="box-title" style="color: #000; font-weight: 600;"> Precio $2.490 </div>
+                                              <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                           </div>
+                                           <!-- /.box-body -->
+                                          </div>
+                                          <div class="box box-danger box-solid" style="border: 1px solid #12111173">
+                                             <div class="box-header with-border" style="background-color: #096f03">
+                                                <h3 class="box-title">Salteado de Vegetales</h3>
+                                             </div>
+                                             <div class="box-body">
+                                                <p>brócoli, pimientos, cebolla, aceite de granola o de oliva, ajo,sal y pimienta.</p>
+                                                <img src="img/vegetales2.jpg" style="width: 246px;">
+                                                <div class="box-title" style="color: #000; font-weight: 600;"> Precio 2.590 </div>
+                                                <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                             </div>
+                                             <!-- /.box-body -->
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.box-body -->
+         </div>
+         <!-- /.box -->
       </div>
-      <div class="box box-danger box-solid">
-          <div class="box-header with-border">
-            <h3 class="box-title">Menu Junaeb</h3>
-          </div>
-          <div class="box-body">
-            <p>Charquican,Ensalada de zanahoria, manzana, vaso de agua</p>
-            <img src="img/menujuna.jpg" style="width: 320px;"> 
-            <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
-          </div>
-          <!-- /.box-body -->
-        </div>
-        <div class="box box-danger box-solid">
-          <div class="box-header with-border">
-            <h3 class="box-title">Menu Vegano</h3>
-          </div>
-          <div class="box-body">
-            <p>Tortilla con Tomate y palta</p>
-            <img src="img/Menuvegano.jpg" style="width: 320px;">
-            <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
-          </div>
-          <!-- /.box-body -->  
-        </div>
-        <div class="box box-danger box-solid">
-          <div class="box-header with-border">
-            <h3 class="box-title">Ensalada Vegetariana</h3>
-          </div>
-          <div class="box-body">
-            <p>Lechuga, Queso blanco, Tomate, Aceituna</p>
-            <img src="img/ensalada1.jpg" style="width: 320px;">
-            <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
-          </div>
-          <!-- /.box-body -->
-        </div>
-        <div class="box box-danger box-solid">
-          <div class="box-header with-border">
-            <h3 class="box-title">Menu Express</h3>
-          </div>
-          <div class="box-body">
-            <p>Sandwich con Lechuga, Jamon, Tomate, Queso fresco</p>
-            <img src="img/menuexpress.jpg" style="width: 320px;">
-            <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
-          </div>
-          <!-- /.box-body -->
-        </div>
-</div>
-<!-- jQuery 3 -->
-<script src="/js/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
-</body>
+      <!-- /.col -->
+      </div>
+      </div>
+      </aside>
+      </div>        
+      <!-- jQuery 3 -->
+      <script src="js/jquery.min.js"></script>
+      <!-- Bootstrap 3.3.7 -->
+      <script src="js/bootstrap.min.js"></script>
+      <script> principal(); </script>
+      <!-- iCheck -->
+   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
