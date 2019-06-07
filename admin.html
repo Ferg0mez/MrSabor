@@ -16,21 +16,33 @@
   <link rel="stylesheet" href="css/AdminLTE.css">
   <link rel="apple-touch-icon" sizes="194x194" href="img/icon.png" type="image/png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <SCRIPT  language=JavaScript> 
+  function go(){
+    if (document.form.password.value=='admin' && document.form.login.value=='admin'){ 
+        document.form.submit(); 
+    } 
+    else{ 
+         alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+    } 
+  } 
+  </SCRIPT> 
 </head>
-<body class="hold-transition login-page" style="
-background: url(img/fondoopcion222.jpg);background-size:300%; background-attachment: fixed;background-position: center;">   
+<body class="hold-transition login-page" style="background: url(img/fondoadmin.jpg);background-size:300%; background-attachment: fixed;background-position: center;">   
+
 <div class="login-box">
   <div class="login-logo">
     <a href="index.html"><img src="img/logo.png " style="
       width:320px;"></a>
   </div>
+  <div class="login-page">
+  </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Ingresa con tus Credenciales </p>
+    <p class="login-box-msg">Ingresa las credenciales de Administrador </p>
 
-    <form action="menus.html" method="post">
+    <form name="form" action="menus.html" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Usuario" required>
+        <input type="text" class="form-control" placeholder="Usuario" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -40,10 +52,7 @@ background: url(img/fondoopcion222.jpg);background-size:300%; background-attachm
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-6">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar Sesion</button>
-        </div>
-        <div class="col-xs-6">
-          <button type="button" class="btn btn-primary btn-block btn-flat"><a href="admin.html" style="color: white;">Administrador</a></button>
+          <button onclick=go() type="submit" class="btn btn-primary btn-block btn-flat">Iniciar Sesion</button>
         </div>
         <!-- /.col -->
       </div>
