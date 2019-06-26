@@ -68,3 +68,26 @@ background: url(img/fondoopcion222.jpg);background-size:300%; background-attachm
   </script>
 </body>
 </html>
+
+ <?php 
+
+                                       include('conexion.php');   
+
+                                       $sql1 = "SELECT * from productos where tipo = 1;";
+                                       $result1=$mysqli->query($sql1);
+                                       
+                                       while ($row1=mysqli_fetch_array($result1)) { 
+                        
+                                           ?> 
+                                          <div class="box-header with-border" style="background-color: #5089ba;">
+                                             <h3 class="box-title"><?php echo $row1['nombre']?></h3>
+                                          </div>
+                                          <div class="box-body">
+                                             <p><?php echo $row1['descripcion'] ?></p>
+                                             <img src="data:image/jpg;base64,<?php echo base64_encode($row1['foto']); ?>"/ style="width: 246px;">
+                                             <div class="box-title" style="color: #000; font-weight: 600;">Precio $<?php echo $row1['precio'] ?></div>
+                                             <a href ="ticket.html" class="btn btn-block btn-success" style="margin-top: 15px;background-color: black;border-color: black;">Reservar</a>
+                                          </div>
+                                           <?php           
+                                       } 
+                                    ?>
